@@ -1,0 +1,38 @@
+<li class="nav-item has-treeview">
+  <a href="#" class="nav-link">
+    <i class="nav-icon fas fa-copy"></i>
+    <p>
+      حسب حالة الرسالة
+      <i class="fas fa-angle-left right"></i>
+    </p>
+  </a>
+  <ul class="nav nav-treeview">
+    {% for st in status %}
+    <li style="cursor: pointer" class="nav-item  st{{st.id}}">
+      <a id="" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p id="" class="statushide">{{ st.name }}</p>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</li>
+<li class="nav-item has-treeview">
+  <a href="#" class="nav-link">
+    <i class="nav-icon fas fa-copy"></i>
+    <p>
+      حسب القسم
+      <i class="fas fa-angle-left right"></i>
+    </p>
+  </a>
+  <ul class="nav nav-treeview">
+    {% for dep in dept %}
+    <li style="cursor: pointer" class="nav-item  dep{{dep.id}}">
+      <a id="" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>{{ dep.name }}</p>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</li>

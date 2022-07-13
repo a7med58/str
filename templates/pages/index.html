@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+
+  <div style="direction: rtl;" class="wrapper">
+
+    <div   class="content-wrapper">
+  
+      <div class="content">
+        <div class="container-fluid">
+            <!--  الطلاب -->
+  
+          <div class="row justify-content-center mb-3">
+            <div class="col-4 ">
+              <ul class="nav">
+            {% for cat in category|slice:'4' %}
+                <li class="nav-item cat{{cat.id}}">
+                  <a id="" class=" fa fa-graduation-cap nav-link  bg-primary" href="#"> طالب {{ cat.name }}</a>
+                </li>
+            {% endfor %}
+
+              </ul>
+            </div>
+          </div>
+       
+          <!-- الرسائل المدرجة -->
+
+          <div class="row">
+              {% for book in books %}
+          <!-- الرسالة -->
+              <div id="" class="col-md-4 bookhide book{{book.category.id}} book{{book.status.id}}">
+                <div id="" class="card card-widget widget-user ">
+                <div style="position: absolute;" class="btn-group">   
+                                
+                </div>
+               {% if book.photo_book %}
+                <div style = "background:url({{book.photo_book.url}}); background-size:cover "   class="widget-user-header bg-info">
+                {% else %}
+                <div class="widget-user-header bg-info">
+                {% endif %}
+                  <h1 class="widget-user-username">{{book.title}}</h1>
+                  <h3 class="widget-user-desc">{{book.author}}</h3>
+                  <h5 class="widget-user-desc">{{book.thidate}}</h5>
+
+                </div>
+                <div class="widget-user-image">
+                {% if book.photo_author %}  
+                  <img style="width:100px; height: 100px;" class="img-circle elevation-2" src="{{book.photo_author.url}}" alt="User Avatar">
+                {% endif %} 
+                </div>
+                <div class="card-footer">
+                  <div class="row">
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <span class="description-text">القسم</span>
+                        <h5 class="description-header">{{book.depart}}</h5>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="description-block">
+                        {% if book.status == 'جارى المناقشة' %}
+                        <span class="description-text">الحالة</span>
+                        <h5 class="description-header text-dark">{{book.stat}}</h5>
+                        {% elif book.status == 'تم المناقشة' %}
+                        <span class="description-text">الحالة</span>
+                        <h5 class="description-header text-danger">{{book.stat}}</h5>
+                        {% else %}
+                        <span class="description-text">الحالة</span>
+                        <h5 class="description-header text-warning">{{book.stat}}</h5>
+                        {% endif %}                     
+                        
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                        <div class="col-sm-4">
+                          <div class="description-block">
+                            <span class="description-text">المكان</span>
+                            <h5 class="description-header text-dark">{{book.modarg}}</h5>
+                          </div>
+                      <!-- /.description-block -->
+                        </div>
+                        
+                  </div>
+                      <!-- /.row -->
+                </div>
+                </div>
+                  <!-- /.widget-user -->
+              </div>
+         
+              {% endfor %}
+
+
+              <div class="row">
+                <div class="col text-center">
+                </div>
+              </div>
+          </div>    
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

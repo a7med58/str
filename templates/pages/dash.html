@@ -1,0 +1,446 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+
+  <div style="direction: rtl;" class="wrapper">
+    <!-- Content Wrapper. Contains page content -->
+    <div   class="content-wrapper">
+    <!-- Content Header (Page header) -->
+
+  <!-- أحصائيات الرسائل -->
+    <div class="content">
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 bystatus">
+            <div class="card">
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة على النظام</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{allbooks}}</span>
+                      
+                    </p>  
+                  </div>
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+                 <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي الرسائل الذى سوف يتم مناقشتها</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{stat}}</span>
+                      
+                    </p>  
+                  </div>
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+                   <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي الرسائل الذى تم ألغاء  مناقشتها</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{statcans}}</span>
+                      
+                    </p>  
+                  </div>
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+              </div>
+              <!-- /.card -->
+            </div>
+            <div class="col-lg-6 bycategory">
+              <div class="card">
+                  <div class="card-header border-0">
+                    <div class="d-flex justify-content-between">
+                      <h3 class="card-title">اجمالي عدد رسائل الدكتوراة</h3>                    
+                    </div>
+                    
+                  </div>
+                  <div class="card-body">
+                    <div class="d-flex">
+                      <p class="d-flex flex-column">
+                        <span class="text-bold text-lg">{{dhp}}</span>
+                        
+                      </p>  
+                    </div>
+                    <!-- /.d-flex -->
+
+                    
+                  </div>
+                  <div class="card-header border-0">
+                    <div class="d-flex justify-content-between">
+                      <h3 class="card-title">اجمالي رسائل الماجستير</h3>                    
+                    </div>
+                    
+                  </div>
+                  <div class="card-body">
+                    <div class="d-flex">
+                      <p class="d-flex flex-column">
+                        <span class="text-bold text-lg">{{mac}}</span>
+                        
+                      </p>  
+                    </div>
+                    <!-- /.d-flex -->
+
+                    
+                  </div>
+                  </div>
+                </div>
+                <!-- /.card -->
+              </div>
+            </div>
+            <div class="card bydepartment">
+                
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة قسم علوم النبات الزراعى</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{abt}}</span>
+                      
+                    </p>  
+                  </div>
+
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة قسم علوم المحاصيل</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{aag}}</span>
+                      
+                    </p>  
+                  </div>
+
+                  <!-- /.d-flex -->
+
+                  
+                </div><div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة قسم علوم الحيوان و النيماتولوجيا</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{azn}}</span>
+                      
+                    </p>  
+                  </div>
+
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة 	قسم علوم الالبان</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{adr}}</span>
+                      
+                    </p>  
+                  </div>
+
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة 	قسم بساتين الفاكهة</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{apm}}</span>
+                      
+                    </p>  
+                  </div>
+
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة قسم بساتين الزينة</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{aoh}}</span>
+                      
+                    </p>  
+                  </div>
+
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة 	قسم الوراثة</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{agn}}</span>
+                      
+                    </p>  
+                  </div>
+
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة 	قسم الهندسة الزراعية</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{aeg}}</span>
+                      
+                    </p>  
+                  </div>
+
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة 	قسم الميكروبيولجيا الزراعية</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{amb}}</span>
+                      
+                    </p>  
+                  </div>
+
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة 	قسم الكيمياء الحيوية الزراعية</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{abc}}</span>
+                      
+                    </p>  
+                  </div>
+
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة 	قسم الصناعات الغذائية</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{aft}}</span>
+                      
+                    </p>  
+                  </div>
+
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة 	قسم الخضر</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{avc}}</span>
+                      
+                    </p>  
+                  </div>
+
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة قسم الحشرات الاقتصادية و المبيدات</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{eep}}</span>
+                      
+                    </p>  
+                  </div>
+
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة 	قسم الانتاج الحيوانى</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{aap}}</span>
+                      
+                    </p>  
+                  </div>
+
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة 	قسم الاقتصاد الزراعى</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{aec}}</span>
+                      
+                    </p>  
+                  </div>
+
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة 	قسم الاراضى</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{ass}}</span>
+                      
+                    </p>  
+                  </div>
+
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة قسم الاجتماع الريفى و الارشاد الزراعى</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{ase}}</span>
+                      
+                    </p>  
+                  </div>
+                  <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">اجمالي عدد الرسائل المسجلة قسم أمراض نبات</h3>                    
+                  </div>
+                  
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">{{app}}</span>
+                      
+                    </p>  
+                  </div>
+
+                 
+
+                  
+                </div>
+              </div>
+                   
+                  <!-- /.d-flex -->
+
+                  
+                </div>
+              </div>
+              <!-- /.card -->
+            </div>
+        </div>
+        </div>    
+    </div>
+</div>
+
+{% endblock %}

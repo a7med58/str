@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content%}
+
+  <div style="direction: rtl;" class="wrapper">
+      <div   class="content-wrapper p-5">
+
+                <div class="row mb-2">
+                  <div class="col-sm-6">
+                    <h1>الرسائل</h1>
+                  </div>
+   
+                </div>
+            </section>
+        
+            <!-- Main content -->
+            <section class="content">                  
+              <!-- Default box -->
+              <div class="card card-solid">
+                <div class="card-body pb-0">
+                  <div class="row d-flex align-items-stretch">
+                    {% for book in books %}
+                    <div   class="col-12 col-sm-6 col-md-4  bookhide book{{book.category.id}} book{{book.status}} book{{book.modarg}}  ">
+                      <div  id="" class="card bg-light">
+                        
+                        <div class="card-body pt-0">
+                          <div class="row">
+                            <div class="col-11">
+                              <h2 class="lead"><b>{{book.author}} </b></h2>
+                              <ul class="  fa-ul text-muted">
+                                <li class="small"><span class="fa-li"></span>بعنوان:  {{book.title}}</li>
+                                <li class="small"><span class="fa-li"></span>طالب:  {{book.category}}</li>
+                                <li class="small"><span class="fa-li"></span>قسم:  {{book.depart}}</li>
+                                <li class="small"><span class="fa-li"></span>موقف المناقشة:  {{book.stat}}</li>
+                                <li class="small"><span class="fa-li"></span>المكان:  {{book.modarg}}</li>
+                                <li class="small"><span class="fa-li"></span>التاريخ:  {{book.thidate}}</li>
+                               
+                              </ul>
+                            </div>
+                            <div class="col-5 text-center">
+                            {% if book.photo_book %}
+                                <img style="height: 120px; width: 120px;"  src="{{book.photo_author.url}}" alt="" class="img-circle img-fluid">
+                            {% else %}
+                                <img style="height: 120px; width: 120px;"  src="{% static 'dist/img/photo1.png' %}" alt="" class="img-circle img-fluid">
+                            {% endif %}
+                              </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      
+                    </div>
+                    
+                    {% endfor %}
+                  </div>
+                </div>
+           
+              </div>
+        
+            </section>
+          </div>
+        
+      </div>
+
+  {% endblock %}
